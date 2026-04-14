@@ -6,8 +6,9 @@ import { RouterProvider } from "react-router";
 import Dashboard from "./pages/dashbord/Dashbord";
 import Stats from "./pages/stats/Stats";
 import Timeline from "./pages/timeline/Timeline";
-import FrindDetails from "./pages/frindDetails/FrindDetails";
 import Layout from "./layout/Layout";
+import FrindDetails from "./pages/frindDetails/FrindDetails";
+import FriendsContextProvider from "./context/FriendsContext";
 
 const router = createBrowserRouter([
   {
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
         index: true,
         element: <Dashboard />,
         loader: async () => {
-          const res = await fetch("Friends.json");
+          const res = await fetch("/Friends.json");
           return res.json();
         },
       },
@@ -27,7 +28,14 @@ const router = createBrowserRouter([
         element: <Stats />,
       },
       { path: "/timeline", element: <Timeline /> },
-      { path: "/friends", element: <FrindDetails /> },
+      {
+        path: "/friends-details/:id",
+        element: <FrindDetails />,
+        loader: async () => {
+          const res = await fetch("/Friends.json");
+          return res.json();
+        },
+      },
     ],
   },
 ]);
@@ -35,6 +43,8 @@ const router = createBrowserRouter([
 const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <FriendsContextProvider>
+      <RouterProvider router={router} />
+    </FriendsContextProvider>
   </StrictMode>,
 );

@@ -1,23 +1,9 @@
+import { Link } from "react-router";
+
 export default function FriendCard({ friend }) {
-  //     {
-  //     "id": 2,
-  //     "name": "Marcus Thompson",
-  //     "picture": "https://randomuser.me/api/portraits/men/34.jpg",
-  //     "email": "marcus.t@outlook.com",
-  //     "days_since_contact": 6,
-  //     "status": "on-track",
-  //     "tags": [
-  //         "work",
-  //         "mentor",
-  //         "basketball"
-  //     ],
-  //     "bio": "Former manager who became a close friend. We play pickup basketball every few weeks and grab coffee to talk about career and life.",
-  //     "goal": 14,
-  //     "next_due_date": "2026-04-22"
-  // }
 
   return (
-    <div className="w-full mx-auto bg-white rounded-2xl shadow-md text-center p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300">
+    <Link to={`/friends-details/${friend.id}`} className="w-full mx-auto bg-white rounded-2xl shadow-md text-center p-6 cursor-pointer hover:shadow-lg transition-shadow duration-300">
       {/* Avatar */}
       <div className="flex justify-center">
         <div className="avatar">
@@ -50,6 +36,6 @@ export default function FriendCard({ friend }) {
           {friend.status}
         </span>
       </div>
-    </div>
+    </Link>
   );
 }
