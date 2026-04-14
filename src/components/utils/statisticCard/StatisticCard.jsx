@@ -8,8 +8,6 @@ export default function StatisticCard() {
       .then((res) => res.json())
       .then((data) => setFriends(data));
   }, []);
-  console.log(friends);
-
 
   return (
     <div className="max-w-277.5 mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-4 pt-10">

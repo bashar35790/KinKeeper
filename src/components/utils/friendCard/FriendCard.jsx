@@ -2,7 +2,7 @@
 
 export default function FriendCard() {
   return (
-    <div className="w-72 mx-auto bg-white rounded-2xl shadow-md text-center p-6">
+    <div className="w-full mx-auto bg-white rounded-2xl shadow-md text-center p-6">
       {/* Avatar */}
       <div className="flex justify-center">
         <div className="avatar">
@@ -27,7 +27,7 @@ export default function FriendCard() {
           WORK
         </span>
 
-        <span className="badge badge-warning badge-md px-4 py-3 rounded-full text-due">
+        <span className="badge  badge-md px-4 py-3 rounded-full bg-due text-white">
           Almost Due
         </span>
       </div>
