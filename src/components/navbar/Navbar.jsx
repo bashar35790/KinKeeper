@@ -12,27 +12,32 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`w-full bg-white border-b border-base-200 md:px-20 max-md:gap-4 px-4 py-4 flex items-center justify-between shadow-sm ${isMenuOpen ? "flex-col items-start" : ""}`}>
+    <nav
+      className={`w-full bg-white border-b border-base-200 md:px-20 max-md:gap-4 px-4 py-4 flex items-center justify-between shadow-sm ${isMenuOpen ? "flex-col items-start" : ""}`}
+    >
       {/* Logo */}
       <div className="md:flex md:items-center flex justify-between w-full items-center">
         <NavLink to="/">
           <img src={Logo} alt="Logo" className="w-36 h-8 mr-2 cursor-pointer" />
         </NavLink>
-        <div className="lg:hidden cursor-pointer w-fit h-fit" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {
-            isMenuOpen ? <X /> : <Menu />
-          }
-          
+        <div
+          className="lg:hidden cursor-pointer w-fit h-fit"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <X /> : <Menu />}
         </div>
       </div>
 
       {/* Nav Items */}
-      <div className={`md:flex h-fit max-md:justify-start items-center gap-2 ${isMenuOpen? "flex flex-col w-full" : "hidden"}`}>
+      <div
+        className={`md:flex h-fit max-md:justify-start items-center gap-2 ${isMenuOpen ? "flex flex-col w-full" : "hidden"}`}
+      >
         {navItems.map(({ path, label, icon: Icon }) => (
           <NavLink
             key={path}
             to={path}
-            onClick={()=>setIsMenuOpen(!isMenuOpen)}
+            
+            onClick={() => isMenuOpen && setIsMenuOpen(false)}
             className={({ isActive }) =>
               `btn btn-sm gap-2 rounded-lg transition-all ${
                 isActive
