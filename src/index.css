@@ -10,3 +10,14 @@ body {
   font-size: 16px;
   color: #64748B;
 }
+
+@theme{
+ --color-*: initial;
+  --color-heading: #1F2937;
+  --color-brand: #244D3F;
+  --color-due: #EFAD44;
+  --color-batch:#CBFADB;
+  --color-overdue: #EF4444;
+  --color-track: #244D3F;
+  --color-copywriter: #FAFAFA;
+}
