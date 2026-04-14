@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Mitchell",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "sarah.mitchell@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend", "travel buddy"],
+    "bio": "Met freshman year of college. We backpacked through Southeast Asia together after graduation. She's now a UX designer in Austin.",
+    "goal": 14,
+    "next_due_date": "2026-04-10"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Thompson",
+    "picture": "https://randomuser.me/api/portraits/men/34.jpg",
+    "email": "marcus.t@outlook.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["work", "mentor", "basketball"],
+    "bio": "Former manager who became a close friend. We play pickup basketball every few weeks and grab coffee to talk about career and life.",
+    "goal": 14,
+    "next_due_date": "2026-04-22"
+  },
+  {
+    "id": 3,
+    "name": "Priya Nair",
+    "picture": "https://randomuser.me/api/portraits/women/45.jpg",
+    "email": "priya.nair@yahoo.com",
+    "days_since_contact": 27,
+    "status": "overdue",
+    "tags": ["childhood", "close friend", "family friend"],
+    "bio": "Grew up three houses apart. Our families spent every Diwali together. She's a pediatric nurse in Toronto now and we're terrible at keeping in touch.",
+    "goal": 21,
+    "next_due_date": "2026-04-05"
+  },
+  {
+    "id": 4,
+    "name": "Daniel Kim",
+    "picture": "https://randomuser.me/api/portraits/men/67.jpg",
+    "email": "dkim.dev@protonmail.com",
+    "days_since_contact": 10,
+    "status": "almost due",
+    "tags": ["tech", "college", "gaming"],
+    "bio": "Met at a hackathon in college. We still do occasional weekend game sessions online. He's a backend engineer at a fintech startup in Seoul.",
+    "goal": 10,
+    "next_due_date": "2026-04-14"
+  },
+  {
+    "id": 5,
+    "name": "Amara Osei",
+    "picture": "https://randomuser.me/api/portraits/women/28.jpg",
+    "email": "amara.osei@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["book club", "neighbor", "close friend"],
+    "bio": "We started a two-person book club during lockdown that somehow kept going. She's a high school English teacher and has the sharpest literary opinions I've ever encountered.",
+    "goal": 7,
+    "next_due_date": "2026-04-18"
+  },
+  {
+    "id": 6,
+    "name": "Rafael Souza",
+    "picture": "https://randomuser.me/api/portraits/men/52.jpg",
+    "email": "rafa.souza@hotmail.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["college", "roommate", "music"],
+    "bio": "College roommate for two years. We were in the same indie band that never quite took off. Now he's an architect in São Paulo. Life drifted us apart but the bond is real.",
+    "goal": 30,
+    "next_due_date": "2026-03-30"
+  },
+  {
+    "id": 7,
+    "name": "Lena Hoffmann",
+    "picture": "https://randomuser.me/api/portraits/women/61.jpg",
+    "email": "lena.h@web.de",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": ["exchange program", "international", "hiking"],
+    "bio": "Met during a study abroad semester in Berlin. We've visited each other twice since then. She works in environmental policy and inspires me to think bigger about climate.",
+    "goal": 14,
+    "next_due_date": "2026-04-15"
+  },
+  {
+    "id": 8,
+    "name": "James Okonkwo",
+    "picture": "https://randomuser.me/api/portraits/men/19.jpg",
+    "email": "james.okonkwo@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["gym buddy", "neighborhood", "food"],
+    "bio": "We met at the local gym and bonded over cooking. Now we do a monthly 'cook-off' dinner where we each try a new cuisine. He's an immigration lawyer with a passion for Nigerian food.",
+    "goal": 10,
+    "next_due_date": "2026-04-20"
+  }
+]
