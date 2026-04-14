@@ -1,15 +1,23 @@
 import { useLoaderData, useParams } from "react-router";
 
 const FrindDetails = () => {
-  
   const { id } = useParams();
   const friendsData = useLoaderData();
 
   const exactFriend = friendsData.find((friend) => friend.id === parseInt(id));
- console.log(exactFriend);
+  console.log(exactFriend);
 
-
-const {name, picture, email, days_since_contact, status, tags, bio, goal, next_due_date}=exactFriend;
+  const {
+    name,
+    picture,
+    email,
+    days_since_contact,
+    status,
+    tags,
+    bio,
+    goal,
+    next_due_date,
+  } = exactFriend;
 
   return (
     <div className=" bg-base-200 py-20">
@@ -26,19 +34,23 @@ const {name, picture, email, days_since_contact, status, tags, bio, goal, next_d
               </div>
               <h2 className="card-title text-brand">{name}</h2>
               <div className="flex flex-col items-center gap-1">
-                <span className="badge badge-error badge-sm text-white">
+                <span
+                  className={`badge  badge-md px-4 py-3 rounded-full ${(status === "on-track" && "bg-green-500") || (status === "almost due" && "bg-due") || (status === "overdue" && "bg-overdue")} text-white`}
+                >
                   {status}
                 </span>
-                <span className="badge badge-success badge-sm text-white">
-                  {tags[0]}
-                </span>
+
+                <div className="flex gap-2 flex-wrap justify-center">
+                  <span className="badge bg-batch badge-md px-4 py-3 rounded-full">
+                    {tags[0]}
+                  </span>
+                  <span className="badge bg-batch badge-md px-4 py-3 rounded-full">
+                    {tags[2]}
+                  </span>
+                </div>
               </div>
-              <p className="text-sm italic">
-                "{bio}"
-              </p>
-              <p className="text-xs">
-                Preferred: {email}
-              </p>
+              <p className="text-sm italic">"{bio}"</p>
+              <p className="text-xs">Preferred: {email}</p>
             </div>
           </div>
 
@@ -114,9 +126,7 @@ const {name, picture, email, days_since_contact, status, tags, bio, goal, next_d
                 <p className="text-3xl font-medium text-brand">
                   {days_since_contact}
                 </p>
-                <p className="text-[18px]">
-                  Days Since Contact
-                </p>
+                <p className="text-[18px]">Days Since Contact</p>
               </div>
             </div>
             <div className="card bg-base-100 border border-base-300 shadow-none">
@@ -127,7 +137,9 @@ const {name, picture, email, days_since_contact, status, tags, bio, goal, next_d
             </div>
             <div className="card bg-base-100 border border-base-300 shadow-none">
               <div className="card-body items-center text-center py-4 px-3">
-                <p className="text-xl font-medium text-brand">{next_due_date}</p>
+                <p className="text-xl font-medium text-brand">
+                  {next_due_date}
+                </p>
                 <p className="text-[18px]">Next Due</p>
               </div>
             </div>
@@ -144,9 +156,7 @@ const {name, picture, email, days_since_contact, status, tags, bio, goal, next_d
               </div>
               <p className="text-sm text-base-content/60">
                 Connect every{" "}
-                <span className="font-medium text-brand">
-                  {goal} days
-                </span>
+                <span className="font-medium text-brand">{goal} days</span>
               </p>
             </div>
           </div>
