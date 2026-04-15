@@ -22,8 +22,8 @@ const FrindDetails = () => {
   } = exactFriend;
 
   return (
-    <div className=" bg-base-200 py-20">
-      <div className="grid grid-cols-3 gap-4 max-w-5xl mx-auto">
+    <div className=" bg-base-200 md:py-20 py-10  px-4">
+      <div className="md:grid md:grid-cols-3 flex flex-col gap-4 max-w-5xl mx-auto">
         {/* Left Column */}
         <div className="flex flex-col gap-3">
           {/* Profile Card */}
@@ -120,9 +120,9 @@ const FrindDetails = () => {
         </div>
 
         {/* Right Column */}
-        <div className="col-span-2 flex flex-col gap-3">
+        <div className="md:col-span-2 flex flex-col gap-3">
           {/* Stats Row */}
-          <div className="grid grid-cols-3 gap-3">
+          <div className="grid md:grid-cols-3 grid-cols-1 gap-3">
             <div className="card bg-base-100 border border-base-300 shadow-none">
               <div className="card-body items-center text-center py-4 px-3">
                 <p className="text-3xl font-medium text-brand">
