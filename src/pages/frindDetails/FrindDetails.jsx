@@ -5,7 +5,7 @@ import { FriendsContext } from "../../context/FriendsContext";
 const FrindDetails = () => {
   const { id } = useParams();
   const friendsData = useLoaderData();
-  const { handleTextButton, handleCallButton, handleVideoButton } = useContext(FriendsContext);
+  const { addToTimeline} = useContext(FriendsContext);
 
   const exactFriend = friendsData.find((friend) => friend.id === parseInt(id));
 
@@ -168,7 +168,7 @@ const FrindDetails = () => {
             <div className="card-body py-4 px-5">
               <h3 className="font-medium text-brand">Quick Check-In</h3>
               <div className="grid grid-cols-3 gap-3">
-                <button className="btn btn-outline btn-sm flex-col h-auto py-4 gap-2 font-normal" onClick={()=>handleCallButton(exactFriend)}>
+                <button className="btn btn-outline btn-sm flex-col h-auto py-4 gap-2 font-normal" onClick={()=>addToTimeline(exactFriend, "call")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
@@ -187,7 +187,7 @@ const FrindDetails = () => {
                 </button>
                 <button
                   className="btn btn-outline btn-sm flex-col h-auto py-4 gap-2 font-normal"
-                  onClick={() => handleTextButton(exactFriend)}
+                  onClick={() => addToTimeline(exactFriend, "text") }
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -205,7 +205,7 @@ const FrindDetails = () => {
                   </svg>
                   Text
                 </button>
-                <button className="btn btn-outline btn-sm flex-col h-auto py-4 gap-2 font-normal" onClick={() => handleVideoButton(exactFriend)}>
+                <button className="btn btn-outline btn-sm flex-col h-auto py-4 gap-2 font-normal" onClick={() => addToTimeline(exactFriend, "video")}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5"
