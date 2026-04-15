@@ -21,7 +21,7 @@ export default function Navbar() {
           <img src={Logo} alt="Logo" className="w-36 h-8 mr-2 cursor-pointer" />
         </NavLink>
         <div
-          className="lg:hidden cursor-pointer w-fit h-fit"
+          className="md:hidden cursor-pointer w-fit h-fit"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X /> : <Menu />}
